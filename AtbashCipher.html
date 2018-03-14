@@ -1,0 +1,69 @@
+<DOCTYPE! html>
+<html>
+
+<head> 
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+.Vbutton {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+
+</style>
+
+<script>
+	
+	function decode() {
+		var alphabet = "abcdefghijklmnopqrstuvwxyz";
+		var tebahpla = "zyxwvutsrqponmlkjihgfedcba";
+		var decoded_string = "";
+		var message = document.getElementById("Input").value;
+		
+	for (i = 0; i < message.length; i++) {
+		var coded_letter = message.charAt(i);
+		var letter_index = alphabet.indexOf(coded_letter);
+		var decoded_letter = tebahpla.charAt(letter_index);
+		decoded_string = decoded_string + decoded_letter;
+		}
+		document.getElementById("Output").value = decoded_string;
+		}
+</script>
+
+<title>Ciphers</title> 
+
+</head>
+
+<body>
+
+
+
+<h1>Atbash Cipher</h1>
+		<p class="intro">The Atbash cipher is a very specific case of a substitution cipher where the letters of the alphabet are reversed.  In otherwords, all As are replaced with Zs, all Bs are replaced with Ys, and so on.</p>
+
+		Input:<br>
+		<textarea id="Input" name="Input" rows="5" cols="30"></textarea><br><br>
+		<button id="Submit" onClick="decode()">Submit</button> <br><br>
+		Output:<br>
+		<textarea id="Output" name="Output" rows="5" cols="30"></textarea>
+		
+<div style="position: absolute; top:50px; left:0;">
+<a href="Ciphers.html"><button type="button">Home</button></a>
+<br>
+<a href="CaesarCipher.html"><button type="button">Caesar Cipher</button></a>
+<br>
+<button class="Vbutton" type="button">Atbash Cipher</button>
+<br>
+
+
+
+</body>
+
+
+
+
+
+</html>

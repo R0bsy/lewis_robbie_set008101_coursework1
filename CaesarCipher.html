@@ -1,0 +1,88 @@
+<DOCTYPE! html>
+<html>
+
+<head> 
+
+<!--https://stackoverflow.com/questions/42611334/encrypt-text-using-caesar-cipher-c-sharp-->
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+
+
+
+.Cbutton {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+</style>
+<script type="text/javascript">
+		function rot13() {
+		var input = document.getElementById("Input").value;
+		var shift = 13;
+		var alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+		var output_text = "";
+		var input_array = input.split('');
+		
+		for (var j = 0; j < input_array.length; j++)
+		{
+		
+			for (var i = 0; i < alphabet.length; i++)
+			{
+			
+				if (input_array[j] == alphabet[i]){
+					input_array[j] = alphabet[(i + shift) % alphabet.length];
+					//console.log("hello")
+					break;
+				}
+			}
+		}
+		output_text = input_array.join("");
+		
+		document.getElementById("Output").value = output_text;
+		}
+		
+		
+	</script>
+
+<title>Ciphers</title> 
+
+</head>
+
+<body>
+
+<h1>Caesar Cipher</h1> 
+
+<p> The Caesar cipher is one of the earliest known and simplest ciphers.
+	It is a type of substitution cipher in which each letter in the plaintext is 'shifted' a certain number of places down the alphabet.
+	For example, with a shift of 1, A would be replaced by B, B would become C, and so on. The method is named after Julius Caesar, who apparently used it to communicate with his generals.
+</p>
+	
+	
+		Input:<br>
+		<textarea id="Input" name="Input" rows="5" cols="30"></textarea><br><br>
+		<button id="Submit" onClick="rot13()">Submit</button> <br><br>
+		Output:<br>
+		<textarea id="Output" name="Output" rows="5" cols="30"></textarea>
+	
+
+
+<div style="position: absolute; top:50px; left:0;">
+<a href="Ciphers.html"><button type="button">Home</button></a>
+<br>
+<button class="Cbutton" type="button">Caesar Cipher</button>
+<br>
+<a href="AtbashCipher.html"><button type="button">Atbash Cipher</button><a/>
+<br>
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>

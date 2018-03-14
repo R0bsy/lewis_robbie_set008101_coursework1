@@ -1,0 +1,30 @@
+html {
+	background-image: url("greybackground.jpg");
+}
+h1 {
+	text-decoration: underline;
+	margin-top:50px;
+	font-size:200%;
+	}
+p  {
+	padding: 50px;
+	margin-left:500px;
+	margin-right:500px;
+	font-size:150%;
+	
+}
+body {
+	text-align: center;
+}
+button {
+	border-color:black;
+	background-color: green;
+	padding: 25px;
+	margin-bottom:50px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	margin-left:20px;
+    
+}
+button:hover {
+	border-color:white;
+}
